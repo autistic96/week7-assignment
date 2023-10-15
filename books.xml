@@ -14,7 +14,7 @@
   </book>
   <book>
     <Title>Algorithms</Title>
-    <Author>Robert Sedgewick & Kevin Wayne</Author>
+    <Author>Robert Sedgewick &amp; Kevin Wayne</Author>
     <Edition>4</Edition>
     <Pages>976</Pages>
   </book>
