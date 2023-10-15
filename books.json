@@ -1,0 +1,22 @@
+{
+  "books": [
+    {
+      "Title": "The Algorithm Design Manual",
+      "Author": "Steven S. Skiena",
+      "Edition": 3,
+      "Pages": 810
+    },
+    {
+      "Title": "Cracking the Coding Interview",
+      "Author": "Gayle Laakmann McDowell",
+      "Edition": 6,
+      "Pages": 687
+    },
+    {
+      "Title": "Algorithms",
+      "Author": "Robert Sedgewick & Kevin Wayne",
+      "Edition": 4,
+      "Pages": 976
+    }
+  ]
+}

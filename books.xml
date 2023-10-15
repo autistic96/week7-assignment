@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<books>
+  <book>
+    <Title>The Algorithm Design Manual</Title>
+    <Author>Steven S. Skiena</Author>
+    <Edition>3</Edition>
+    <Pages>810</Pages>
+  </book>
+  <book>
+    <Title>Cracking the Coding Interview</Title>
+    <Author>Gayle Laakmann McDowell</Author>
+    <Edition>6</Edition>
+    <Pages>687</Pages>
+  </book>
+  <book>
+    <Title>Algorithms</Title>
+    <Author>Robert Sedgewick & Kevin Wayne</Author>
+    <Edition>4</Edition>
+    <Pages>976</Pages>
+  </book>
+</books>
