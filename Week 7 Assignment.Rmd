@@ -1,0 +1,62 @@
+---
+title: "Week 7 Assignment"
+author: "Kelly Eng"
+date: "2023-10-15"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Load the needed packages
+```{r load-needed-packages}
+library(tidyverse)
+library(rvest)
+library(jsonlite)
+library(xml2)
+```
+
+Get the html file I created hosted on GitHub
+```{r get-files}
+html_books_file <- read_html("https://raw.githubusercontent.com/autistic96/week7-assignment/main/books.html")
+
+html_books_file
+
+str(html_books_file)
+
+# Tibble
+html_books_file |> 
+  html_element("table") |> 
+  html_table()
+```
+
+Get the XML file from my GitHub
+```{r xml-file}
+xml_books_file <- read_xml("https://raw.githubusercontent.com/autistic96/week7-assignment/main/books.xml")
+
+str(xml_books_file)
+
+# Extraction
+titles <- xml_text(xml_find_all(xml_books_file, "//Title"))
+authors <- xml_text(xml_find_all(xml_books_file, "//Author"))
+editions <- as.integer(xml_text(xml_find_all(xml_books_file, "//Edition")))
+pages <- as.integer(xml_text(xml_find_all(xml_books_file, "//Pages")))
+
+# Create the data frame
+xml_to_df <- data.frame(Title = titles, Author = authors, Edition = editions, Pages = pages)
+
+print(xml_to_df)
+```
+
+Getting the JSON file from my GitHub
+```{r json-file}
+json_books_file <- fromJSON("https://raw.githubusercontent.com/autistic96/week7-assignment/main/books.json")
+
+str(json_books_file)
+
+# RStudio already displays this as a data frame without needing to convert.
+json_books_file
+```
+
+All three data frames are identical for every category. The title and author are both characters. The edition number and pages are both integers.
